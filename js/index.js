@@ -60,5 +60,16 @@ let boton = document.getElementById("idBotonCalcular");
 boton.addEventListener("click", respuestaClick);
 function respuestaClick() {
 calcular();}
-  
-  
+
+const URLGET = ""
+
+const { value: email } = await Swal.fire({
+  title: 'Informar mail para contacto con Soporte',
+  input: 'email',
+  inputLabel: 'Lo contactaremos a la brevedad',
+  inputPlaceholder: 'Ingrese su Email'
+})
+
+if (email) {
+  Swal.fire(`Entered email: ${email}`)
+}
