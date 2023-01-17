@@ -61,15 +61,15 @@ boton.addEventListener("click", respuestaClick);
 function respuestaClick() {
 calcular();}
 
-const URLGET = ""
+const URLGET = "https://random-data-api.com/api/users/random_user?size=1";
 
-const { value: email } = await Swal.fire({
-  title: 'Informar mail para contacto con Soporte',
-  input: 'email',
-  inputLabel: 'Lo contactaremos a la brevedad',
-  inputPlaceholder: 'Ingrese su Email'
+let boton2 = document.getElementById("boton");
+
+boton2.addEventListener("click", () => {
+  Swal.fire({
+      title: 'Informar mail para contacto con Soporte',
+      input: 'email',
+      inputLabel: 'Lo contactaremos a la brevedad',
+      inputPlaceholder: 'Ingrese su Email'
 })
-
-if (email) {
-  Swal.fire(`Entered email: ${email}`)
-}
+});
