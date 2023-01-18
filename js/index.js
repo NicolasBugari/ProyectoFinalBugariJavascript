@@ -61,6 +61,7 @@ boton.addEventListener("click", respuestaClick);
 function respuestaClick() {
 calcular();}
 
+
 const URLGET = "https://random-data-api.com/api/users/random_user?size=1";
 
 let boton2 = document.getElementById("boton");

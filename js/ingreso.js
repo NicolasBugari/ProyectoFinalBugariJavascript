@@ -8,7 +8,14 @@ function ingresar() {
         ingresar();
       }
     } else {
-      window.location = "./paginas/calculo.html";
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Ingreso Autorizado',
+          showConfirmButton: false,
+          timer: 1000
+        })
+      function redireccionar(){window.location = "./paginas/calculo.html";}
+      setTimeout ("redireccionar()",1500)
+      }
     }
-}
-  
