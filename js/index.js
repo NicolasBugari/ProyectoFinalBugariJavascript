@@ -14,11 +14,13 @@ class Operacion {
       }
     }
   } 
+
 function calcular() {
 let capitalIngresado = Number(document.getElementById("idCapital").value);
 let plazoIngresado = document.getElementById("idPlazo").value;
 let nombreIngresado = document.getElementById("idNombre").value;
-  
+
+
 const operacion = new Operacion(nombreIngresado);
 operacion.calcularPlazoFijo(capitalIngresado, plazoIngresado);
 
@@ -51,28 +53,15 @@ operacion.calcularPlazoFijo(capitalIngresado, plazoIngresado);
     let texto5 = document.getElementById("idTexto5");
       texto5.innerHTML = `INTERESES GANADOS: $${resultado} (U$S)`;
     let texto6 = document.getElementById("idTexto6");
-      texto6.innerHTML = `Este es tu resultado en moneda extranjera U$S Para obtener el resultado en moneda ARG debe seleccionar la opcion "EN PESOS"`;
+      texto6.innerHTML = `Este es tu resultado en moneda extranjera U$S Para obtener el resultado en moneda ARGENTINA debe seleccionar la opcion "EN PESOS"`;
   } 
   
 localStorage.clear();   } 
-
 
 let boton = document.getElementById("idBotonCalcular");
 boton.addEventListener("click", respuestaClick);
 function respuestaClick() {
 calcular();}
 
-
-
 const URLGET = "https://random-data-api.com/api/users/random_user?size=1";
 
-let boton2 = document.getElementById("boton");
-
-boton2.addEventListener("click", () => {
-  Swal.fire({
-      title: 'Informar mail para contacto con Soporte',
-      input: 'email',
-      inputLabel: 'Lo contactaremos a la brevedad',
-      inputPlaceholder: 'Ingrese su Email'
-})
-});
