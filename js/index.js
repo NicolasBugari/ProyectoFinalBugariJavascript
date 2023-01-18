@@ -56,10 +56,12 @@ operacion.calcularPlazoFijo(capitalIngresado, plazoIngresado);
   
 localStorage.clear();   } 
 
+
 let boton = document.getElementById("idBotonCalcular");
 boton.addEventListener("click", respuestaClick);
 function respuestaClick() {
 calcular();}
+
 
 
 const URLGET = "https://random-data-api.com/api/users/random_user?size=1";

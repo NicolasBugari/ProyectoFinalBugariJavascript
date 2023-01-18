@@ -6,16 +6,15 @@ function ingresar() {
       boton.addEventListener("click", respuestaClick);
       function respuestaClick() {
         ingresar();
-      }
+      }  
     } else {
-        Swal.fire({
-          position: 'top-end',
-          icon: 'success',
-          title: 'Ingreso Autorizado',
-          showConfirmButton: false,
-          timer: 1000
-        })
-      function redireccionar(){window.location = "./paginas/calculo.html";}
-      setTimeout ("redireccionar()",1500)
-      }
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Ingreso Autorizado',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      setTimeout(function(){window.top.location="./paginas/calculo.html"} , 2000);
     }
+}
