@@ -1,3 +1,14 @@
+function frases(){
+fetch("frases.json")
+    .then(response => response.json())
+    .then(frases => {
+     frases.forEach(frases => {
+      console.log(frases);
+      
+     })
+     })
+   }
+
 class Operacion {
     constructor(nombreIngresado) {
       this.nombre = nombreIngresado.toUpperCase();
@@ -19,8 +30,6 @@ function calcular() {
 let capitalIngresado = Number(document.getElementById("idCapital").value);
 let plazoIngresado = document.getElementById("idPlazo").value;
 let nombreIngresado = document.getElementById("idNombre").value;
-
-
 
 const operacion = new Operacion(nombreIngresado);
 operacion.calcularPlazoFijo(capitalIngresado, plazoIngresado);
