@@ -1,13 +1,18 @@
+const h3 = document.getElementById("frases")
+
 function frases(){
 fetch("frases.json")
     .then(response => response.json())
     .then(frases => {
      frases.forEach(frases => {
-      console.log(frases);
-      
+      const h3 = document.createElement('h3')
+      h3.innerHTML = `
+        <h1>${frases.title}</h1>
+        `;
+      frases.append(h3)    
      })
-     })
-   }
+    }
+)};
 
 class Operacion {
     constructor(nombreIngresado) {
