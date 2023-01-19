@@ -9,11 +9,12 @@ function ingresar() {
       }  
     } else {
       Swal.fire({
-        position: 'top-end',
+        position: 'top-start',
         icon: 'success',
         title: 'Ingreso Autorizado',
         showConfirmButton: false,
-        timer: 1500
+        timer: 1500,
+        width: '15rem'
       })
       setTimeout(function(){window.top.location="./paginas/calculo.html"} , 2000);
     }
