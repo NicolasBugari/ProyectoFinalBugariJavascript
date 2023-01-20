@@ -62,15 +62,16 @@ let boton = document.getElementById("idBotonCalcular");
 boton.addEventListener("click", respuestaClick);
 function respuestaClick() { calcular();}
 
-const h3 = document.getElementById("frases")
+const frases = document.getElementById("frases")
 
-fetch("../js/frases.json")
+fetch("../js/data.json")
 .then(response => response.json())
 .then(data => {
   data.forEach(frases => {
     const h3 = document.createElement("h3")
     h3.innerHTML = `
       <p>${frases.body}</p>
+      <hr/>
       `;
     frases.append(h3)    
     })
