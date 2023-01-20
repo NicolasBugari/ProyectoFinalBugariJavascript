@@ -67,11 +67,10 @@ const frases = document.getElementById("frases")
 fetch("../js/data.json")
 .then(response => response.json())
 .then(data => {
-  data.forEach(frases => {
+  data.forEach(idTexto7 => {
     const h3 = document.createElement("h3")
     h3.innerHTML = `
-      <p>${frases.body}</p>
-      <hr/>
+      <p>${idTexto7.body}</p>
       `;
     frases.append(h3)    
     })
