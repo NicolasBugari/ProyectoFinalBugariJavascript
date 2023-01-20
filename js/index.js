@@ -55,26 +55,26 @@ operacion.calcularPlazoFijo(capitalIngresado, plazoIngresado);
       texto6.innerHTML = `Este es tu resultado en moneda extranjera U$S Para obtener el resultado en moneda ARGENTINA debe seleccionar la opcion "EN PESOS"`;
   } 
   
-localStorage.clear();   } 
+localStorage.clear();
+} 
 
 let boton = document.getElementById("idBotonCalcular");
 boton.addEventListener("click", respuestaClick);
-function respuestaClick() {
-calcular();}
+function respuestaClick() { calcular();}
 
 const h3 = document.getElementById("frases")
 
-fetch("frases.json")
-    .then(response => response.json())
-    .then(data => {
-     data.forEach(frases => {
-      const h3 = document.createElement("h3")
-      h3.innerHTML = `
-        <p>${frases.body}</p>
-        `;
-      frases.append(h3)    
-     })
-    }
+fetch("../js/frases.json")
+.then(response => response.json())
+.then(data => {
+  data.forEach(frases => {
+    const h3 = document.createElement("h3")
+    h3.innerHTML = `
+      <p>${frases.body}</p>
+      `;
+    frases.append(h3)    
+    })
+  }
 ).catch((error) => console.log(error))
 
 
