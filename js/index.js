@@ -64,18 +64,17 @@ calcular();}
 
 const h3 = document.getElementById("frases")
 
-function ingresarFrases(){
 fetch("frases.json")
     .then(response => response.json())
     .then(data => {
      data.forEach(frases => {
       const h3 = document.createElement("h3")
       h3.innerHTML = `
-        <h3>${frases.body}</h3>
+        <p>${frases.body}</p>
         `;
       frases.append(h3)    
      })
     }
 ).catch((error) => console.log(error))
-};
+
 
